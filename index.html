@@ -2979,6 +2979,187 @@ class="big"
   box-sizing:border-box!important;
 }
 
+
+/* INFORMAR · data de tall de les mètriques */
+.slide[data-title="Informar"] .inform-data-cutoff{
+  margin:-4px 8px 8px;
+  text-align:right;
+  font-size:10px;
+  line-height:1.2;
+  font-weight:700;
+  color:var(--muted);
+  letter-spacing:.01em;
+}
+
+
+/* Nota temporal de dades */
+.data-cutoff-note{
+  margin-top:5px;
+  font-size:10px;
+  line-height:1.15;
+  color:var(--muted);
+  font-weight:700;
+}
+
+
+/* ESCUCHAR · nota temporal global sota els 4 KPI */
+.slide[data-title="Escuchar"] .data-cutoff-note-global{
+  margin-top:6px!important;
+  text-align:right!important;
+  font-size:10px!important;
+  line-height:1.15!important;
+  color:var(--muted)!important;
+  font-weight:700!important;
+}
+
+
+/* ESCUCHAR · nota temporal sota el bloc dels 4 KPI, alineada a l'esquerra */
+.slide[data-title="Escuchar"] .data-cutoff-note-left{
+  margin-top:7px!important;
+  margin-left:2px!important;
+  text-align:left!important;
+  font-size:10px!important;
+  line-height:1.15!important;
+  color:var(--muted)!important;
+  font-weight:700!important;
+}
+
+
+/* ESCUCHAR · bloc KPI + nota temporal realment a sota */
+.slide[data-title="Escuchar"] .listen-kpi-block{
+  min-width:0;
+  width:100%;
+}
+
+.slide[data-title="Escuchar"] .data-cutoff-note-under-kpis{
+  margin-top:8px!important;
+  margin-left:2px!important;
+  width:100%!important;
+  text-align:left!important;
+  font-size:10px!important;
+  line-height:1.15!important;
+  color:var(--muted)!important;
+  font-weight:700!important;
+  position:static!important;
+}
+
+
+/* ESCUCHAR · nota temporal després dels 4 KPI */
+.slide[data-title="Escuchar"] .listen-kpi-block{
+  position:relative;
+}
+
+.slide[data-title="Escuchar"] .data-cutoff-note-after-kpis{
+  margin-top:8px!important;
+  margin-left:56%!important;
+  width:auto!important;
+  text-align:left!important;
+  font-size:10px!important;
+  line-height:1.15!important;
+  color:var(--muted)!important;
+  font-weight:700!important;
+  opacity:0;
+  transform:translateY(6px);
+}
+
+/* Quan ESCUCHAR està activa, la nota entra després de les 4 targetes KPI */
+.slide[data-title="Escuchar"].active .data-cutoff-note-after-kpis{
+  animation:cutoffAfterMetrics .28s ease .95s forwards;
+}
+
+@keyframes cutoffAfterMetrics{
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@media(max-width:900px){
+  .slide[data-title="Escuchar"] .data-cutoff-note-after-kpis{
+    margin-left:0!important;
+    text-align:left!important;
+  }
+}
+
+
+/* ESCUCHAR · alineació final de la nota amb la columna dreta de KPI */
+.slide[data-title="Escuchar"] .data-cutoff-note-after-kpis{
+  margin-top:8px!important;
+  margin-left:0!important;
+  width:100%!important;
+  padding-right:0!important;
+  text-align:right!important;
+  box-sizing:border-box!important;
+  font-size:10px!important;
+  line-height:1.15!important;
+  color:var(--muted)!important;
+  font-weight:700!important;
+}
+
+
+/* INFORMAR · mateixa transició temporal que ESCUCHAR */
+.slide[data-title="Informar"] .data-cutoff-note-informar-animated{
+  opacity:0;
+  transform:translateY(6px);
+}
+
+.slide[data-title="Informar"].active .data-cutoff-note-informar-animated{
+  animation:cutoffAfterMetrics .28s ease .95s forwards;
+}
+
+
+/* INFORMAR · recupera la posició original de la nota, mantenint la transició */
+.slide[data-title="Informar"] .data-cutoff-note-informar-animated{
+  width:100%!important;
+  margin-top:6px!important;
+  margin-left:0!important;
+  padding-right:0!important;
+  text-align:right!important;
+  box-sizing:border-box!important;
+  font-size:10px!important;
+  line-height:1.15!important;
+  color:var(--muted)!important;
+  font-weight:700!important;
+  opacity:0;
+  transform:translateY(6px);
+}
+
+.slide[data-title="Informar"].active .data-cutoff-note-informar-animated{
+  animation:cutoffAfterMetrics .28s ease .95s forwards;
+}
+
+
+/* INFORMAR · aire entre KPI, nota temporal i gràfica */
+.slide[data-title="Informar"] .inform-unified-metrics{
+  margin-bottom:0!important;
+}
+
+.slide[data-title="Informar"] .data-cutoff-note-informar-animated{
+  width:100%!important;
+  margin:10px 0 10px 0!important;
+  padding:0 2px 0 0!important;
+  text-align:right!important;
+  box-sizing:border-box!important;
+  font-size:10px!important;
+  line-height:1.15!important;
+  color:var(--muted)!important;
+  font-weight:700!important;
+  opacity:0;
+  transform:translateY(6px);
+}
+
+.slide[data-title="Informar"] .inform-unified-left .inform-visible-chart{
+  margin-top:0!important;
+}
+
+.slide[data-title="Informar"] .inform-unified-left .inform-visible-chart .line-chart{
+  height:190px!important;
+}
+
+.slide[data-title="Informar"].active .data-cutoff-note-informar-animated{
+  animation:cutoffAfterMetrics .28s ease .95s forwards;
+}
+
 </style></head><body>
 <div class="progress" id="progress"></div><nav class="top" id="top"></nav>
 <main class="app">
@@ -3157,7 +3338,7 @@ Acompañar a cada viajero con la información adecuada, en el momento oportuno y
   </div>
 
   <div class="sub">
-    En 2023 creamos una comunidad en un canal de MS Teams (Travel Teams), para que los viajeros
+    En 2023 creamos una comunidad en un canal de MS Teams (<b>Travel Teams</b>), para que los viajeros
     tuvieran un único lugar donde encontrar información, resolver dudas y mantenerse conectados
     con el programa de viajes.
   </div>
@@ -3168,7 +3349,7 @@ Acompañar a cada viajero con la información adecuada, en el momento oportuno y
 
       <div class="grid inform-unified-metrics">
         <div class="card metric">
-          <div class="big">2.172</div>
+          <div class="big">2.169</div>
           <div class="label">miembros actuales</div>
         </div>
 
@@ -3182,6 +3363,8 @@ Acompañar a cada viajero con la información adecuada, en el momento oportuno y
           <div class="label">reacciones</div>
         </div>
       </div>
+
+      <div class="data-cutoff-note data-cutoff-note-informar-animated">Datos a cierre de junio de 2026</div>
 
       <div class="chart-card inform-visible-chart">
         <div class="inform-visible-chart-head">
@@ -3203,8 +3386,8 @@ Acompañar a cada viajero con la información adecuada, en el momento oportuno y
     <div class="inform-unified-right">
       <div class="inform-visible-content">
         <div class="inform-visible-content-head">
-          <span>TRAVEL TEAMS · CONTENIDO PARA CADA MOMENTO DEL VIAJE</span>
-          <strong>Explora ejemplos reales</strong>
+
+          <strong>Explorar ejemplos reales</strong>
         </div>
 
         <div class="inform-visible-stages">
@@ -3288,12 +3471,16 @@ Acompañar a cada viajero con la información adecuada, en el momento oportuno y
 <div class="sub">Desde abril de 2024, esta escucha se canaliza también a través de Microsoft Teams, mediante mensajes específicos que complementan la comunidad y permiten recoger aprendizajes de forma más directa.</div>
 
 <div class="dashboard">
-  <div class="grid listen-metrics">
+  
+<div class="listen-kpi-block">
+<div class="grid listen-metrics">
     <div class="card metric"><div class="big">6.595</div><div class="label">encuestas recibidas</div></div>
     <div class="card metric"><div class="big">90,1</div><div class="label">valoración media /100</div></div>
     <div class="card metric"><div class="big">2.882</div><div class="label">comentarios recibidos</div></div>
     <div class="card metric"><div class="big">608</div><div class="label">viajeros contactados</div></div>
   </div>
+  <div class="data-cutoff-note data-cutoff-note-after-kpis">Datos a cierre de junio de 2026</div>
+</div>
 
   <div class="card listen-process-card">
     <h3>Cómo escuchamos</h3>
@@ -3751,7 +3938,7 @@ Durante este tiempo hemos compartido información, escuchado necesidades y acomp
     <div class="examples-head">
       <div>
         <h3 id="examplesTitle">Contenidos publicados en Travel Teams</h3>
-        <p>Selecciona una etapa, una categoría y una publicación.</p>
+        <p>Seleccionar una etapa, una categoría y una publicación.</p>
       </div>
       <button class="examples-close-all" onclick="closeExamplesExplorer()">× Cerrar ejemplos</button>
     </div>
