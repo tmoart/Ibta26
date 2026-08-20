@@ -1,4 +1,4 @@
- un<!doctype html>
+<!doctype html>
 <html lang="es">
 <head>
 <meta charset="utf-8">
@@ -2336,6 +2336,649 @@ class="big"
   animation-delay:.25s!important;
 }
 
+
+/* =========================================================
+   INFORMAR · PROPOSTA C
+   4 moments del viatge visibles a la pàgina principal
+   ========================================================= */
+
+.slide[data-title="Informar"] .inform-visible-wrap{
+  display:grid;
+  grid-template-columns:minmax(0,1.22fr) minmax(330px,.78fr);
+  gap:18px;
+  align-items:start;
+  margin-top:20px;
+}
+
+.inform-visible-main,
+.inform-visible-side{
+  min-width:0;
+}
+
+.inform-visible-metrics{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:8px;
+  margin-bottom:10px;
+}
+
+.inform-visible-metric{
+  padding:13px 10px 11px;
+  border:1px solid var(--line);
+  border-radius:17px;
+  background:#fff;
+  text-align:center;
+  box-shadow:0 8px 24px rgba(0,55,100,.05);
+}
+
+.inform-visible-metric strong{
+  display:block;
+  color:var(--blue);
+  font-size:clamp(26px,2.45vw,38px);
+  line-height:1;
+  letter-spacing:-.045em;
+}
+
+.inform-visible-metric span{
+  display:block;
+  margin-top:5px;
+  color:var(--muted);
+  font-size:10px;
+  font-weight:800;
+}
+
+.inform-visible-content{
+  padding:16px;
+  border:1px solid rgba(0,90,156,.17);
+  border-radius:22px;
+  background:
+    radial-gradient(circle at 92% 5%,rgba(107,165,57,.10),transparent 26%),
+    linear-gradient(145deg,#F4F9FD,#fff);
+  box-shadow:0 13px 36px rgba(0,55,100,.075);
+}
+
+.inform-visible-content-head{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom:11px;
+}
+
+.inform-visible-content-head span{
+  color:var(--green);
+  font-size:8.5px;
+  font-weight:950;
+  letter-spacing:.11em;
+}
+
+.inform-visible-content-head strong{
+  color:var(--blue2);
+  font-size:14px;
+  line-height:1;
+  white-space:nowrap;
+}
+
+.inform-visible-stages{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:8px;
+}
+
+.inform-visible-stages button{
+  min-width:0;
+  display:grid;
+  grid-template-columns:34px minmax(0,1fr) auto;
+  gap:9px;
+  align-items:center;
+  padding:11px 11px;
+  border:1px solid rgba(0,90,156,.13);
+  border-radius:15px;
+  background:#fff;
+  text-align:left;
+  cursor:pointer;
+  box-shadow:0 6px 18px rgba(0,55,100,.04);
+  transition:.17s ease;
+}
+
+.inform-visible-stages button:hover{
+  transform:translateY(-2px);
+  border-color:rgba(0,90,156,.34);
+  box-shadow:0 10px 23px rgba(0,55,100,.08);
+}
+
+.inform-visible-stage-icon{
+  display:grid;
+  place-items:center;
+  width:34px;
+  height:34px;
+  border-radius:11px;
+  background:linear-gradient(145deg,rgba(0,90,156,.09),rgba(107,165,57,.12));
+  font-size:17px;
+}
+
+.inform-visible-stage-copy{
+  min-width:0;
+}
+
+.inform-visible-stage-copy b{
+  display:block;
+  color:var(--blue2);
+  font-size:10.5px;
+  line-height:1.15;
+}
+
+.inform-visible-stage-copy small{
+  display:block;
+  margin-top:3px;
+  overflow:hidden;
+  color:var(--muted);
+  font-size:9px;
+  line-height:1.2;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+}
+
+.inform-visible-arrow{
+  color:var(--green);
+  font-size:18px;
+  font-weight:950;
+}
+
+.inform-visible-side{
+  display:flex;
+  flex-direction:column;
+  gap:9px;
+}
+
+.inform-visible-chart{
+  padding:16px 17px 9px!important;
+  border-radius:22px!important;
+}
+
+.inform-visible-chart-head{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:10px;
+}
+
+.inform-visible-chart-head span{
+  display:block;
+  margin-bottom:2px;
+  color:var(--green);
+  font-size:8px;
+  font-weight:950;
+  letter-spacing:.11em;
+}
+
+.inform-visible-chart-head h3{
+  margin:0!important;
+  color:var(--blue2);
+  font-size:16px!important;
+}
+
+.inform-visible-chart-head>strong{
+  color:var(--muted);
+  font-size:9px;
+  white-space:nowrap;
+}
+
+.inform-visible-chart .line-chart{
+  display:block;
+  width:100%!important;
+  height:190px!important;
+  margin-top:-4px;
+}
+
+.inform-visible-why{
+  width:100%;
+  margin-top:0!important;
+  padding:11px 13px!important;
+  border-radius:15px!important;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  text-align:left;
+  font-size:11px;
+}
+
+.inform-visible-why b{
+  color:var(--green);
+  font-size:15px;
+}
+
+.inform-visible-reveal{
+  margin-top:0!important;
+  padding:12px 14px!important;
+  border-radius:15px!important;
+  font-size:11px;
+  line-height:1.35;
+}
+
+@media(max-width:980px){
+  .slide[data-title="Informar"] .inform-visible-wrap{
+    grid-template-columns:1fr;
+    gap:14px;
+  }
+
+  .inform-visible-side{
+    display:grid;
+    grid-template-columns:1fr;
+  }
+
+  .inform-visible-chart .line-chart{
+    height:175px!important;
+  }
+}
+
+@media(max-width:680px){
+  .inform-visible-metrics{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+  }
+
+  .inform-visible-content{
+    padding:13px;
+  }
+
+  .inform-visible-content-head{
+    display:block;
+  }
+
+  .inform-visible-content-head strong{
+    display:block;
+    margin-top:4px;
+  }
+
+  .inform-visible-stages{
+    grid-template-columns:1fr;
+  }
+
+  .inform-visible-stage-copy small{
+    white-space:normal;
+  }
+
+  .inform-visible-chart .line-chart{
+    height:160px!important;
+  }
+}
+
+
+/* =========================================================
+   INFORMAR · PROPOSTA D
+   Mètriques a dalt · gràfica esquerra · 4 botons dreta
+   ========================================================= */
+
+.slide[data-title="Informar"] .inform-visible-wrap-d{
+  display:block!important;
+  margin-top:18px!important;
+}
+
+.inform-visible-metrics-row{
+  margin-bottom:10px;
+}
+
+.inform-visible-metrics-row .inform-visible-metrics{
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  margin-bottom:0!important;
+}
+
+.inform-visible-columns{
+  display:grid;
+  grid-template-columns:minmax(350px,.92fr) minmax(0,1.08fr);
+  gap:18px;
+  align-items:start;
+}
+
+.inform-visible-left,
+.inform-visible-right{
+  min-width:0;
+}
+
+.inform-visible-left{
+  display:flex;
+  flex-direction:column;
+  gap:9px;
+}
+
+.inform-visible-left .inform-visible-chart{
+  width:100%;
+}
+
+.inform-visible-left .inform-visible-chart .line-chart{
+  height:205px!important;
+}
+
+.inform-visible-right .inform-visible-content{
+  width:100%;
+}
+
+.inform-visible-right .inform-visible-stages{
+  grid-template-columns:1fr!important;
+  gap:9px!important;
+}
+
+.inform-visible-right .inform-visible-stages button{
+  min-height:59px;
+  padding:11px 13px!important;
+  grid-template-columns:38px minmax(0,1fr) auto!important;
+}
+
+.inform-visible-right .inform-visible-stage-icon{
+  width:38px!important;
+  height:38px!important;
+  font-size:18px!important;
+}
+
+.inform-visible-right .inform-visible-stage-copy b{
+  font-size:11px!important;
+}
+
+.inform-visible-right .inform-visible-stage-copy small{
+  font-size:9.5px!important;
+  white-space:normal!important;
+}
+
+@media(max-width:980px){
+  .inform-visible-columns{
+    grid-template-columns:1fr!important;
+    gap:14px!important;
+  }
+
+  .inform-visible-left .inform-visible-chart .line-chart{
+    height:185px!important;
+  }
+
+  .inform-visible-right .inform-visible-stages{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+}
+
+@media(max-width:680px){
+  .inform-visible-right .inform-visible-stages{
+    grid-template-columns:1fr!important;
+  }
+
+  .inform-visible-left .inform-visible-chart .line-chart{
+    height:160px!important;
+  }
+}
+
+
+/* =========================================================
+   INFORMAR · AJUST DESKTOP EN MÒBIL
+   Manté gràfica esquerra + botons dreta fins a 720px
+   ========================================================= */
+
+@media(min-width:721px){
+  .slide[data-title="Informar"] .inform-visible-columns{
+    grid-template-columns:minmax(330px,.92fr) minmax(360px,1.08fr)!important;
+    gap:16px!important;
+  }
+
+  .slide[data-title="Informar"] .inform-visible-left,
+  .slide[data-title="Informar"] .inform-visible-right{
+    min-width:0!important;
+  }
+
+  .slide[data-title="Informar"] .inform-visible-right .inform-visible-stages{
+    grid-template-columns:1fr!important;
+  }
+}
+
+/* Anul·la el breakpoint anterior de 980px entre 721 i 980px */
+@media(min-width:721px) and (max-width:980px){
+  .slide[data-title="Informar"] .inform-visible-columns{
+    grid-template-columns:minmax(320px,.92fr) minmax(350px,1.08fr)!important;
+  }
+
+  .slide[data-title="Informar"] .inform-visible-left .inform-visible-chart .line-chart{
+    height:190px!important;
+  }
+
+  .slide[data-title="Informar"] .inform-visible-right .inform-visible-stages{
+    grid-template-columns:1fr!important;
+  }
+}
+
+/* Només en pantalles realment estretes passa a una columna */
+@media(max-width:720px){
+  .slide[data-title="Informar"] .inform-visible-columns{
+    grid-template-columns:1fr!important;
+    gap:14px!important;
+  }
+
+  .slide[data-title="Informar"] .inform-visible-right .inform-visible-stages{
+    grid-template-columns:1fr!important;
+  }
+}
+
+
+/* =========================================================
+   INFORMAR · PROPOSTA E
+   Mètriques unificades amb ESCUCHAR
+   Esquerra: mètriques + gràfica + perquè
+   Dreta: exploració dels exemples
+   ========================================================= */
+
+.slide[data-title="Informar"] .inform-unified-layout{
+  display:grid;
+  grid-template-columns:minmax(0,1.08fr) minmax(390px,.92fr);
+  gap:20px;
+  align-items:start;
+  margin-top:20px;
+}
+
+.inform-unified-left,
+.inform-unified-right{
+  min-width:0;
+}
+
+/* Exactament el mateix criteri visual que les mètriques d'ESCUCHAR */
+.slide[data-title="Informar"] .inform-unified-metrics{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:12px;
+  margin-bottom:12px;
+}
+
+.slide[data-title="Informar"] .inform-unified-metrics .card.metric{
+  min-height:108px!important;
+  padding:14px 18px!important;
+  border-radius:22px!important;
+  display:flex!important;
+  flex-direction:column!important;
+  justify-content:center!important;
+  width:88%!important;
+  margin:0 auto!important;
+}
+
+.slide[data-title="Informar"] .inform-unified-metrics .big{
+  font-size:clamp(32px,3.5vw,52px)!important;
+  line-height:.95!important;
+  letter-spacing:-.045em!important;
+  white-space:nowrap!important;
+}
+
+.slide[data-title="Informar"] .inform-unified-metrics .label{
+  font-size:clamp(12px,.95vw,15px)!important;
+  line-height:1.15!important;
+  margin-top:6px!important;
+}
+
+/* Gràfica sota les mètriques */
+.slide[data-title="Informar"] .inform-unified-left .inform-visible-chart{
+  width:100%;
+  padding:16px 18px 9px!important;
+  border-radius:22px!important;
+}
+
+.slide[data-title="Informar"] .inform-unified-left .inform-visible-chart .line-chart{
+  display:block;
+  width:100%!important;
+  height:205px!important;
+  margin-top:-4px;
+}
+
+/* Per què canal unidireccional just sota la gràfica */
+.slide[data-title="Informar"] .inform-unified-why{
+  width:100%;
+  margin-top:9px!important;
+  padding:10px 14px!important;
+  border-radius:15px!important;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  text-align:left;
+  font-size:11px;
+}
+
+.slide[data-title="Informar"] .inform-unified-why b{
+  color:var(--green);
+  font-size:15px;
+}
+
+.slide[data-title="Informar"] .inform-unified-reveal{
+  margin-top:7px!important;
+  padding:12px 14px!important;
+  border-radius:15px!important;
+  font-size:11px;
+  line-height:1.35;
+}
+
+/* Columna dreta: només explorar els exemples */
+.slide[data-title="Informar"] .inform-unified-right .inform-visible-content{
+  width:100%;
+  padding:17px!important;
+}
+
+.slide[data-title="Informar"] .inform-unified-right .inform-visible-stages{
+  grid-template-columns:1fr!important;
+  gap:9px!important;
+}
+
+.slide[data-title="Informar"] .inform-unified-right .inform-visible-stages button{
+  min-height:61px;
+  padding:12px 13px!important;
+  grid-template-columns:38px minmax(0,1fr) auto!important;
+}
+
+.slide[data-title="Informar"] .inform-unified-right .inform-visible-stage-icon{
+  width:38px!important;
+  height:38px!important;
+  font-size:18px!important;
+}
+
+.slide[data-title="Informar"] .inform-unified-right .inform-visible-stage-copy b{
+  font-size:11px!important;
+}
+
+.slide[data-title="Informar"] .inform-unified-right .inform-visible-stage-copy small{
+  font-size:9.5px!important;
+  white-space:normal!important;
+}
+
+/* Manté la composició de dues columnes en desktop/tauleta */
+@media(min-width:721px){
+  .slide[data-title="Informar"] .inform-unified-layout{
+    grid-template-columns:minmax(360px,1.08fr) minmax(360px,.92fr)!important;
+  }
+}
+
+/* Només en mòbil realment estret, passa a una columna */
+@media(max-width:720px){
+  .slide[data-title="Informar"] .inform-unified-layout{
+    grid-template-columns:1fr!important;
+    gap:14px!important;
+  }
+
+  .slide[data-title="Informar"] .inform-unified-metrics{
+    grid-template-columns:repeat(3,minmax(0,1fr))!important;
+    gap:7px!important;
+  }
+
+  .slide[data-title="Informar"] .inform-unified-metrics .card.metric{
+    width:100%!important;
+    min-height:94px!important;
+    padding:11px 8px!important;
+  }
+
+  .slide[data-title="Informar"] .inform-unified-left .inform-visible-chart .line-chart{
+    height:170px!important;
+  }
+}
+
+
+/* =========================================================
+   INFORMAR · AJUST FINAL DEL BOTÓ "CANAL UNIDIRECCIONAL"
+   Manté la proposta E i només recol·loca aquest element
+   ========================================================= */
+
+.slide[data-title="Informar"] .inform-unified-right{
+  display:flex;
+  flex-direction:column;
+  align-items:stretch;
+}
+
+.slide[data-title="Informar"] .inform-unified-why-wrap{
+  margin-top:10px;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+}
+
+.slide[data-title="Informar"] .inform-unified-why-wrap .inform-unified-why{
+  width:auto!important;
+  max-width:78%!important;
+  margin:0!important;
+  padding:9px 13px!important;
+  border-radius:999px!important;
+  font-size:10.5px!important;
+  background:#fff!important;
+  border:1px solid rgba(0,90,156,.18)!important;
+  color:var(--blue2)!important;
+  box-shadow:0 5px 14px rgba(0,55,100,.05)!important;
+}
+
+.slide[data-title="Informar"] .inform-unified-why-wrap .inform-unified-why:hover{
+  border-color:rgba(0,90,156,.32)!important;
+  box-shadow:0 7px 18px rgba(0,55,100,.08)!important;
+}
+
+.slide[data-title="Informar"] .inform-unified-why-wrap .inform-unified-reveal{
+  width:78%!important;
+  margin-top:7px!important;
+  padding:11px 13px!important;
+  border-radius:14px!important;
+  font-size:10.5px!important;
+  line-height:1.35!important;
+}
+
+/* L'objectiu és que la base del botó quedi visualment propera a la base del gràfic */
+.slide[data-title="Informar"] .inform-unified-right .inform-visible-content{
+  flex:0 0 auto;
+}
+
+@media(max-width:980px){
+  .slide[data-title="Informar"] .inform-unified-why-wrap .inform-unified-why,
+  .slide[data-title="Informar"] .inform-unified-why-wrap .inform-unified-reveal{
+    max-width:100%!important;
+    width:100%!important;
+  }
+}
+
+
+/* INFORMAR · desplegable "¿Por qué un canal unidireccional?" a amplada completa */
+.slide[data-title="Informar"] .inform-unified-why-wrap{
+  width:100%!important;
+}
+.slide[data-title="Informar"] .inform-unified-why-wrap .inform-unified-reveal{
+  width:100%!important;
+  max-width:100%!important;
+  box-sizing:border-box!important;
+}
+
 </style></head><body>
 <div class="progress" id="progress"></div><nav class="top" id="top"></nav>
 <main class="app">
@@ -2437,7 +3080,7 @@ Acompañar a cada viajero con la información adecuada, en el momento oportuno y
           </svg>
         </div>
         <h3>Escuchar</h3>
-        <p>Recoger la voz real del viajero.</p>
+        <p>Recoger la voz del viajero.</p>
         <span>Ver detalle →</span>
       </button>
 
@@ -2486,38 +3129,143 @@ Acompañar a cada viajero con la información adecuada, en el momento oportuno y
 
 
 <!--INFORMAR-->
+
+
 <section class="slide" data-title="Informar"><div class="inner">
-<div class="kicker">04 · Informar</div><div class="section-title-row"><div class="section-model-icon section-model-icon-informar" aria-hidden="true">
+
+  <div class="kicker">04 · Informar</div>
+
+  <div class="section-title-row">
+    <div class="section-model-icon section-model-icon-informar" aria-hidden="true">
       <svg class="model-icon" viewBox="0 0 96 96" role="img">
-        <defs><linearGradient id="sectionGradientInformar" x1="18" y1="20" x2="78" y2="76" gradientUnits="userSpaceOnUse"><stop stop-color="#005A9C"/><stop offset="1" stop-color="#6BA539"/></linearGradient></defs>
+        <defs>
+          <linearGradient id="sectionGradientInformarUnified" x1="18" y1="20" x2="78" y2="76" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#005A9C"/>
+            <stop offset="1" stop-color="#6BA539"/>
+          </linearGradient>
+        </defs>
         <circle class="icon-fill-soft" cx="48" cy="48" r="34"/>
-        <path class="icon-line" stroke="url(#sectionGradientInformar)" d="M25 52h11l28 14V30L36 44H25a7 7 0 0 0-7 7v1a7 7 0 0 0 7 7Z"/>
-        <path class="icon-line" stroke="url(#sectionGradientInformar)" d="M36 59v16c0 3.5-5 3.5-5 0V59"/>
-        <path class="icon-line" stroke="url(#sectionGradientInformar)" d="M72 42l7-5"/>
-        <path class="icon-line" stroke="url(#sectionGradientInformar)" d="M74 52h9"/>
-        <path class="icon-line" stroke="url(#sectionGradientInformar)" d="M72 62l7 5"/>
+        <path class="icon-line" stroke="url(#sectionGradientInformarUnified)" d="M25 52h11l28 14V30L36 44H25a7 7 0 0 0-7 7v1a7 7 0 0 0 7 7Z"/>
+        <path class="icon-line" stroke="url(#sectionGradientInformarUnified)" d="M36 59v16c0 3.5-5 3.5-5 0V59"/>
+        <path class="icon-line" stroke="url(#sectionGradientInformarUnified)" d="M72 42l7-5"/>
+        <path class="icon-line" stroke="url(#sectionGradientInformarUnified)" d="M74 52h9"/>
+        <path class="icon-line" stroke="url(#sectionGradientInformarUnified)" d="M72 62l7 5"/>
       </svg>
-    </div><h2>Encontramos la forma de estar presentes antes, durante y después del viaje</h2></div>
-<div class="sub">En 2023 creamos una comunidad en un canal de MS Teams , para que los viajeros tuvieran un único lugar donde encontrar información, resolver dudas y mantenerse conectados con el programa de viajes.</div>
-<div class="community-wrap"><div><div class="grid g3" style="margin-bottom:18px">
+    </div>
 
-<!--<div class="card metric metric-members"><div class="big" style="font-size:40px;line-height:1.05">2.163</div><div class="label">miembros actuales</div></div>-->
-<!--<div class="card metric"><div class="big" style="font-size:45px">14%</div><div class="label">sobre viajeros</div></div>-->
-<!--<div class="card metric"><div class="big" style="font-size:45px">2023</div><div class="label">año de creación</div></div></div><div class="grid g2">-->
-
-<div class="card metric metric-members"><div class="big" style="font-size:40px;line-height:1.05">2.172</div><div class="label">miembros actuales</div></div>
-<div class="card metric metric-members"><div class="big" style="font-size:40px;line-height:1.05">334</div><div class="label">publicaciones</div></div>
-<div class="card metric metric-members"><div class="big" style="font-size:40px;line-height:1.05">3.994</div><div class="label">reacciones</div></div>
-
-</div>
-<div class="examples-launch">
-  <div class="examples-launch-copy">
-    <strong>Explora ejemplos reales de Travel Teams</strong>
-    <span>NOVEDADES, ALERTAS y otros contenidos</span>
+    <h2>Encontramos la forma de estar presentes antes, durante y después del viaje</h2>
   </div>
-  <button class="examples-launch-btn" onclick="openExamplesExplorer()">Ver ejemplos →</button>
-</div>
-<button class="why" onclick="toggleReveal()">¿Por qué un canal unidireccional?</button><div class="reveal" id="why">Porque la información crítica no puede perderse entre conversaciones. El objetivo es evitar ruido, impedir que el canal se convierta en un buzón de quejas y asegurar que cada publicación tenga valor para el viajero.</div></div><div class="chart-card"><h3>Evolución de la comunidad</h3><p style="color:var(--muted);margin-top:0">Miembros desde la creación del canal hasta junio de 2026.</p><svg class="line-chart" viewBox="0 0 620 290"><line x1="45" y1="240" x2="585" y2="240" stroke="#D9E6EF" stroke-width="2"/><line x1="45" y1="35" x2="45" y2="240" stroke="#D9E6EF" stroke-width="2"/><polyline class="chart-line" points="45,240 145,202 290,157 335,98 450,70 500,61 585,36"/><circle class="chart-dot" style="animation-delay:.2s" cx="45" cy="240" r="6"/><text class="chart-value" style="animation-delay:.25s" x="32" y="230">0</text><circle class="chart-dot" style="animation-delay:.45s" cx="145" cy="202" r="6"/><text class="chart-value" style="animation-delay:.5s" x="126" y="190">405</text><circle class="chart-dot" style="animation-delay:.7s" cx="290" cy="157" r="6"/><text class="chart-value" style="animation-delay:.75s" x="270" y="145">872</text><circle class="chart-dot" style="animation-delay:.95s" cx="335" cy="98" r="6"/><text class="chart-value" style="animation-delay:1s" x="310" y="85">1.553</text><circle class="chart-dot" style="animation-delay:1.2s" cx="450" cy="70" r="6"/><text class="chart-value" style="animation-delay:1.25s" x="425" y="58">1.820</text><circle class="chart-dot" style="animation-delay:1.45s" cx="500" cy="61" r="6"/><text class="chart-value" style="animation-delay:1.5s" x="475" y="49">1.937</text><circle class="chart-dot" style="animation-delay:1.7s" cx="585" cy="36" r="6"/><text class="chart-value" style="animation-delay:1.75s" x="548" y="28">2.163</text><text class="chart-label" x="30" y="264">2023</text><text class="chart-label" x="132" y="264">may 24</text><text class="chart-label" x="270" y="264">feb 25</text><text class="chart-label" x="425" y="264">nov 25</text><text class="chart-label" x="540" y="264">jun 26</text></svg></div></div></div></section>
+
+  <div class="sub">
+    En 2023 creamos una comunidad en un canal de MS Teams (Travel Teams), para que los viajeros
+    tuvieran un único lugar donde encontrar información, resolver dudas y mantenerse conectados
+    con el programa de viajes.
+  </div>
+
+  <div class="inform-unified-layout">
+
+    <div class="inform-unified-left">
+
+      <div class="grid inform-unified-metrics">
+        <div class="card metric">
+          <div class="big">2.172</div>
+          <div class="label">miembros actuales</div>
+        </div>
+
+        <div class="card metric">
+          <div class="big">334</div>
+          <div class="label">publicaciones</div>
+        </div>
+
+        <div class="card metric">
+          <div class="big">3.994</div>
+          <div class="label">reacciones</div>
+        </div>
+      </div>
+
+      <div class="chart-card inform-visible-chart">
+        <div class="inform-visible-chart-head">
+          <div>
+            <span>COMUNIDAD</span>
+            <h3>Evolución de Travel Teams</h3>
+          </div>
+          <strong>2023 → 2026</strong>
+        </div>
+        <svg class="line-chart" viewBox="0 0 620 290"><line x1="45" y1="240" x2="585" y2="240" stroke="#D9E6EF" stroke-width="2"/><line x1="45" y1="35" x2="45" y2="240" stroke="#D9E6EF" stroke-width="2"/><polyline class="chart-line" points="45,240 145,202 290,157 335,98 450,70 500,61 585,36"/><circle class="chart-dot" style="animation-delay:.2s" cx="45" cy="240" r="6"/><text class="chart-value" style="animation-delay:.25s" x="32" y="230">0</text><circle class="chart-dot" style="animation-delay:.45s" cx="145" cy="202" r="6"/><text class="chart-value" style="animation-delay:.5s" x="126" y="190">405</text><circle class="chart-dot" style="animation-delay:.7s" cx="290" cy="157" r="6"/><text class="chart-value" style="animation-delay:.75s" x="270" y="145">872</text><circle class="chart-dot" style="animation-delay:.95s" cx="335" cy="98" r="6"/><text class="chart-value" style="animation-delay:1s" x="310" y="85">1.553</text><circle class="chart-dot" style="animation-delay:1.2s" cx="450" cy="70" r="6"/><text class="chart-value" style="animation-delay:1.25s" x="425" y="58">1.820</text><circle class="chart-dot" style="animation-delay:1.45s" cx="500" cy="61" r="6"/><text class="chart-value" style="animation-delay:1.5s" x="475" y="49">1.937</text><circle class="chart-dot" style="animation-delay:1.7s" cx="585" cy="36" r="6"/><text class="chart-value" style="animation-delay:1.75s" x="548" y="28">2.163</text><text class="chart-label" x="30" y="264">2023</text><text class="chart-label" x="132" y="264">may 24</text><text class="chart-label" x="270" y="264">feb 25</text><text class="chart-label" x="425" y="264">nov 25</text><text class="chart-label" x="540" y="264">jun 26</text></svg>
+      </div>
+
+      
+
+      
+
+    </div>
+
+    <div class="inform-unified-right">
+      <div class="inform-visible-content">
+        <div class="inform-visible-content-head">
+          <span>TRAVEL TEAMS · CONTENIDO PARA CADA MOMENTO DEL VIAJE</span>
+          <strong>Explora ejemplos reales</strong>
+        </div>
+
+        <div class="inform-visible-stages">
+
+          <button onclick="openExamplesExplorerAt('antes')">
+            <span class="inform-visible-stage-icon">🗓️</span>
+            <span class="inform-visible-stage-copy">
+              <b>ANTES DE RESERVAR</b>
+              <small>Preparar, anticipar y decidir mejor</small>
+            </span>
+            <span class="inform-visible-arrow">→</span>
+          </button>
+
+          <button onclick="openExamplesExplorerAt('durante')">
+            <span class="inform-visible-stage-icon">✈️</span>
+            <span class="inform-visible-stage-copy">
+              <b>DURANTE EL VIAJE</b>
+              <small>Acompañar, informar y reaccionar</small>
+            </span>
+            <span class="inform-visible-arrow">→</span>
+          </button>
+
+          <button onclick="openExamplesExplorerAt('despues')">
+            <span class="inform-visible-stage-icon">🧳</span>
+            <span class="inform-visible-stage-copy">
+              <b>DESPUÉS DEL VIAJE</b>
+              <small>Cerrar, justificar y simplificar</small>
+            </span>
+            <span class="inform-visible-arrow">→</span>
+          </button>
+
+          <button onclick="openExamplesExplorerAt('todo')">
+            <span class="inform-visible-stage-icon">💬</span>
+            <span class="inform-visible-stage-copy">
+              <b>SIEMPRE</b>
+              <small>Consejos y respuestas en cualquier momento</small>
+            </span>
+            <span class="inform-visible-arrow">→</span>
+          </button>
+
+        </div>
+      </div>
+      <div class="inform-unified-why-wrap">
+        <button class="why inform-unified-why" onclick="toggleReveal()">
+        <span>¿Por qué un canal unidireccional?</span>
+        <b>＋</b>
+      </button>
+        <div class="reveal inform-unified-reveal" id="why">
+        Porque la información crítica no puede perderse entre conversaciones. El objetivo es evitar ruido,
+        impedir que el canal se convierta en un buzón de quejas y asegurar que cada publicación tenga valor
+        para el viajero.
+      </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div></section>
+
+
 
 <!--INFORMAR*/
 <section class="slide" data-title="Informar"><div class="inner"><div class="kicker">05 · Informar para acompañar</div><h2>La información adecuada, en el momento adecuado</h2><div class="sub">No compartimos información por comunicar. Compartimos aquello que ayuda al viajero a tomar mejores decisiones en cada etapa del viaje.</div><div class="content-legend"><span class="legend-title">Líneas de contenido</span><span class="content-type">Contenido operativo</span><span class="content-type culture">Cultura viajera</span><span class="frequency-badge">Wellbeing · publicación semanal cada jueves</span></div><div class="tabs"><button class="tab active" onclick="showPanel('info','antes',this)">Antes de reservar</button><button class="tab" onclick="showPanel('info','durante',this)">Durante</button><button class="tab" onclick="showPanel('info','despues',this)">Después</button><button class="tab" onclick="showPanel('info','tips',this)">Tips / FAQs</button><button class="tab no-publish" onclick="showPanel('info','no',this)">Qué no publicamos</button></div><div id="info-antes" class="panel active card"><h3>🧭 Antes de reservar nada</h3><div class="grid g4" style="margin-top:18px"><button class="topic-chip " onclick="openTeamsPost(`INFO`,`ETA Reino Unido`,`📋 A partir del 5 de marzo de 2025 ya se puede solicitar la ETA para viajar al Reino Unido. Será obligatoria para ciudadanos europeos a partir del 2 de abril de 2025. Permite estancias de hasta 6 meses y debe solicitarse antes de viajar.`)">INFO · ETA Reino Unido</button><button class="topic-chip " onclick="openTeamsPost(`INFO`,`Horario agencia`,`📅🐥 Con motivo de Semana Santa, la agencia tendrá servicio de guardia en horario especial. Fuera de este horario estará disponible únicamente el servicio de urgencias.`)">INFO · Horario agencia</button><button class="topic-chip " onclick="openTeamsPost(`INFO`,`Wizzair`,`🛫 Para reservar Wizzair, igual que Ryanair, es necesario hacerlo vía “más servicios” para que la agencia pueda gestionar cambios y anulaciones correctamente.`)">INFO · Wizzair</button><button class="topic-chip " onclick="openTeamsPost(`NEWS`,`Iryo Tarragona`,`🚆 Tarragona, ahora todo el año con Iryo. Venta abierta para viajar desde Camp de Tarragona durante 2026 hacia Zaragoza, Madrid, Córdoba, Sevilla y Málaga.`)">NEWS · Iryo Tarragona</button><button class="topic-chip " onclick="openTeamsPost(`NEWS`,`Alta ocupación`,`📅⚠️ Fechas de alta ocupación 2026. Recomendamos evitar viajar u organizar sesiones en esos días si se necesita alojamiento.`)">NEWS · Alta ocupación</button><button class="topic-chip " onclick="openTeamsPost(`NEWS`,`Asientos Iryo`,`🚂💺 Ya podemos cambiar los asientos de Iryo online. Aunque no se pueda elegir asiento en la autoreserva, puede modificarse desde su web.`)">NEWS · Asientos Iryo</button><button class="topic-chip " onclick="openTeamsPost(`EVENTS`,`Torre Melina`,`🆕 Nuevo espacio disponible para eventos en Barcelona. Torre Melina ofrece espacios para reuniones, jardín botánico y rooftop.`)">EVENTS · Torre Melina</button><button class="topic-chip culture" onclick="openTeamsPost(`ECO FRIENDLY`,`Muévete ECO`,`🌱 Muévete haciendo ECO. Campaña para promover decisiones de movilidad más responsables.`)">ECO · Muévete ECO</button></div></div><div id="info-durante" class="panel card"><h3>✈️ Desde la reserva hasta acabar el viaje</h3><div class="grid g4" style="margin-top:18px"><button class="topic-chip " onclick="openTeamsPost(`ALERTAS`,`Cierre SCQ`,`✈️ Cierre temporal del aeropuerto de Santiago de Compostela del 23 de abril al 27 de mayo. Revisa el aeropuerto del billete y prevé alternativas.`)">ALERTAS · Cierre SCQ</button><button class="topic-chip " onclick="openTeamsPost(`ALERTAS`,`Viento Catalunya`,`🚧 Desplazamientos en Catalunya. Alerta meteorológica de viento: se recomienda evitar desplazamientos y valorar cambios de viaje.`)">ALERTAS · Viento</button><button class="topic-chip " onclick="openTeamsPost(`ALERTAS`,`Chamartín`,`⚠️🚆 RENFE: por obras en Chamartín, el cierre de check-in pasa de 2 a 5 minutos en determinados servicios.`)">ALERTAS · Chamartín</button><button class="topic-chip " onclick="openTeamsPost(`TELÉFONOS`,`Teléfonos`,`☎️ Teléfonos de agencia, eventos, ISOS, seguridad, seguros y otros canales de asistencia durante el viaje.`)">TELÉFONOS</button><button class="topic-chip culture" onclick="openTeamsPost(`WELLBEING`,`Pantalla pública`,`✈️🚂 No hablas por teléfono… pero tu pantalla sí. Trabajar en movimiento está bien. Trabajar en abierto… no tanto. Ajusta ángulo y brillo, evita información sensible y, si dudas, espera a llegar.`)">WELLBEING · Pantalla pública</button><button class="topic-chip culture" onclick="openTeamsPost(`WELLBEING`,`Viajar con criterio`,`✈️🧠 Viajar con criterio también es saber cuándo no hacerlo. Viajar con criterio no es viajar menos: es viajar cuando realmente aporta.`)">WELLBEING · Viajar con criterio</button><button class="topic-chip culture" onclick="openTeamsPost(`WELLBEING`,`Oídos avión`,`✈️👂 Dolor de oídos al despegar o aterrizar. Consejos: bostezar, tragar, hidratarse, evitar dormir en el descenso y usar tapones de aviación.`)">WELLBEING · Oídos avión</button><button class="topic-chip culture" onclick="openTeamsPost(`WELLBEING`,`Vuelta rutina`,`🎒 5 consejos para volver a trabajar y viajar sin drama: priorizar, reservar con antelación, recuperar rutinas y cuidar el ánimo.`)">WELLBEING · Vuelta rutina</button></div></div><div id="info-despues" class="panel card"><h3>📩 Una vez acabado el viaje</h3><div class="grid g3" style="margin-top:18px"><button class="topic-chip " onclick="openTeamsPost(`EXPENSES`,`Imbric`,`🅿️ Aparca con Imbric: parkings de AENA, estaciones de tren, parkings públicos y zonas reguladas en muchas ciudades.`)">EXPENSES · Imbric</button></div></div><div id="info-tips" class="panel card"><h3>💡 Tips / FAQs</h3><p>Contenido transversal: aplica antes, durante y después del viaje.</p><div class="grid g3" style="margin-top:18px"><button class="topic-chip " onclick="openTeamsPost(`TIPS / FAQS`,`Datos contacto`,`✈️ Revisa tus datos de contacto en la herramienta de autorreserva: contacto de emergencia, teléfono y correo actualizados.`)">TIP · Datos de contacto</button><button class="topic-chip " onclick="openTeamsPost(`TIPS / FAQS`,`Aprobador vacaciones`,`⛱️ ¿Quién aprueba mientras tú descansas? Si eres aprobador y te vas de vacaciones, designa una persona sustituta.`)">TIP · Aprobador vacaciones</button></div></div><div id="info-no" class="panel card"><h3>🚫 Qué no publicamos</h3><ul class="phase-list"><li>Noticias generales sin impacto para el viajero</li><li>Información corporativa que no ayuda a preparar o gestionar un viaje</li><li>Comunicaciones repetidas</li><li>Contenido que genera ruido pero no mejora la experiencia</li></ul></div></div></section>
@@ -3027,7 +3775,7 @@ Durante este tiempo hemos compartido información, escuchado necesidades y acomp
         </button>
 
         <button class="stage-tab" data-stage="todo" onclick="selectExampleStage('todo',this)">
-          <strong>TODO EL VIAJE</strong>
+          <strong>SIEMPRE</strong>
           <span>Consejos y respuestas en cualquier momento.</span>
         </button>
       </aside>
@@ -3472,6 +4220,12 @@ function openExamplesExplorer(){
   selectExampleStage(currentExampleStage,activeStage,false);
 }
 
+function openExamplesExplorerAt(stage){
+  document.getElementById('examplesModal').classList.add('active');
+  const button=document.querySelector('.stage-tab[data-stage="'+stage+'"]');
+  selectExampleStage(stage,button,true);
+}
+
 function closeExamplesExplorer(){
   document.getElementById('examplesModal').classList.remove('active');
   document.getElementById('examplesWorkspace').classList.remove('detail-open');
@@ -3685,11 +4439,11 @@ go(0);showCase(0,document.querySelector('.casebtn'));
 const modelTexts = {
   informar: {
     title: "¿Cómo lo hacemos?",
-    text: "Compartimos información útil, clara y accionable antes, durante y después del viaje para que el viajero pueda anticiparse mejor a cada situación."
+    text: "Compartimos información útil y clara  antes, durante y después del viaje para que el viajero pueda anticiparse mejor a cada situación."
   },
   escuchar: {
     title: "¿Cómo lo hacemos?",
-    text: "Recogemos la voz real del viajero a través de encuestas, comentarios y sugerencias para entender qué funciona, qué preocupa y qué podemos mejorar."
+    text: "Recogemos la voz del viajero a través de encuestas, comentarios y sugerencias para entender qué funciona, qué preocupa y qué podemos mejorar."
   },
   actuar: {
     title: "¿Cómo lo hacemos?",
